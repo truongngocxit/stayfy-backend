@@ -1,0 +1,16 @@
+body {
+  font-family: "Montserrat";
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul > li {
+  margin-top: 6px;
+}

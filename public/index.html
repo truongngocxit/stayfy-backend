@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <title>Stayfy backend</title>
+  </head>
+  <body>
+    <h1>Hello there! this is a simple backend for my Stayfy app</h1>
+    <h2>GET</h2>
+    <ul>
+      <li>
+        To get all collections from either
+        founders/facts/filters/locations/facilities:
+        <ul>
+          <li>
+            https://stayfy-backend-production.up.railway.app/all-docs/:collection
+          </li>
+        </ul>
+      </li>
+      <li>
+        To get user upcoming trips:
+        <ul>
+          <li>
+            https://stayfy-backend-production.up.railway.app/upcoming-trips/:userId
+          </li>
+        </ul>
+      </li>
+      <li>
+        To get lodges by IDs. Param queries: { lodgeIds }.
+        <ul>
+          <li>
+            https://stayfy-backend-production.up.railway.app/lodges-by-ids
+          </li>
+        </ul>
+      </li>
+      <li>
+        To get paginated lodges. Param queries: { cursor , numOfItems,
+        featureFilter, locationFilter, price, facilities, typesOfStay }.
+        <ul>
+          <li>
+            https://stayfy-backend-production.up.railway.app/lodges-by-ids
+          </li>
+        </ul>
+      </li>
+      <li>
+        To get certain lodges by order and filter. Param queries: { descending,
+        filter, limit }.
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/query-lodge</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>POST</h2>
+    <ul>
+      <li>
+        To log user in. body: { email, password }
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/login</li>
+        </ul>
+      </li>
+      <li>
+        To sign user up. body: { firstName, lastName, phone, email, password }
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/login</li>
+        </ul>
+      </li>
+      <li>
+        To add subscription. body: { email }
+        <ul>
+          <li>
+            https://stayfy-backend-production.up.railway.app/add-subscription
+          </li>
+        </ul>
+      </li>
+      <li>
+        To add booking. body: { bookingData, userId }
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/add-booking</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>PATCH</h2>
+    <ul>
+      <li>
+        To update user info. body: { userId, updatedData }
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/update-user</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2>DELETE</h2>
+    <ul>
+      <li>
+        To delete user. body: { userId }
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/delete-user</li>
+        </ul>
+      </li>
+      <li>
+        To delete trip. body: { bookingId, userId }
+        <ul>
+          <li>https://stayfy-backend-production.up.railway.app/delete-trip</li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>
